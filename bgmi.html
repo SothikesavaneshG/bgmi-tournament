@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGMI Tournament</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
+</head>
+<body>
+    <header>
+        <h1>BGMI Tournament</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tournaments</a></li>
+                <li><a href="#">Leaderboard</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome to the BGMI Tournament</h2>
+            <p>Join the best BGMI players for exciting tournaments!</p>
+            <button class="join-btn" onclick="openRegistrationForm()">Join Tournament</button>
+        </section>
+
+        <section class="tournament-list">
+            <h2>Upcoming Tournaments</h2>
+            <ul id="tournamentList">
+                <!-- Tournaments will be dynamically populated here -->
+            </ul>
+        </section>
+
+        <div id="registrationForm" class="registration-form">
+            <h3>Register for Tournament</h3>
+            <form id="registerForm" onsubmit="registerTournament(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <button type="submit">Submit</button>
+                <button type="button" onclick="closeRegistrationForm()">Cancel</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BGMI Tournament</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to JS -->
+</body>
+</html>
